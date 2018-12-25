@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.matrix</groupId>
+    <artifactId>functional-programming-in-java</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>ch01-introduction</module>
+        <module>fpjava-common</module>
+        <module>ch02-using-javafunctions-ex</module>
+        <module>ch02-using-javafunctions-solutions</module>
+        <module>ch03-making-java-functional-exercise</module>
+        <module>ch03-making-java-functional-solutions</module>
+        <module>ch04-recursion-exercise</module>
+        <module>ch04-recursion-solutions</module>
+        <module>ch05-lists-exercises</module>
+        <module>ch05-lists-solutions</module>
+        <module>ch06-optional-exercises</module>
+        <module>ch06-optional-solutions</module>
+        <module>ch07-handling-error-exercises</module>
+        <module>ch07-handling-error-solutions</module>
+        <module>ch08-advanced-list-exercises</module>
+        <module>ch08-advanced-list-solutions</module>
+        <module>ch09-laziness-exercises</module>
+        <module>ch09-laziness-solutions</module>
+        <module>ch10-trees-exercises</module>
+        <module>ch10-trees-solutions</module>
+        <module>ch11-advanced-trees-exercises</module>
+        <module>ch11-advanced-trees-solutions</module>
+        <module>ch12-state-exercises</module>
+        <module>ch12-state-solutions</module>
+        <module>ch13-io-exercises</module>
+        <module>ch13-io-solutions</module>
+        <module>ch14-actor</module>
+        <module>ch15-applications</module>
+    </modules>
+
+
+    <properties>
+        <java.version>1.8</java.version>
+        <scala.version>2.12.5</scala.version>
+        <scala.compactVersion>2.12</scala.compactVersion>
+        <akka.version>2.5.18</akka.version>
+        <akka.http.version>10.1.5</akka.http.version>
+        <circe.version>0.9.3</circe.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.3.2</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
