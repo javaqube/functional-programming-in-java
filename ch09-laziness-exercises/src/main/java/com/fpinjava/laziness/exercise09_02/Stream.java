@@ -22,7 +22,14 @@ abstract class Stream<A> {
   public abstract Result<A> headOption();
 
   public List<A> toList() {
-    throw new IllegalStateException("To be implemented");
+//    throw new IllegalStateException("To be implemented");
+    return toList(this,List.list()).eval().reverse();
+  }
+
+  private TailCall<List<A>> toList(Stream<A> s, List<A> acc){
+    return s.isEmpty()
+            ? ret(acc)
+            : sus(()->toList(s.tail(),List.cons(s.head(),acc)));
   }
 
   private Stream() {}

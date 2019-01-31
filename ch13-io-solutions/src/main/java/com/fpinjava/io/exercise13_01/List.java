@@ -200,12 +200,12 @@ public abstract class List<A> {
     return m;
   }
 
-  public <B> Map<B, List<A>> groupBy(Function<A, B> f) {
-    return foldRight(Map.empty(), t -> mt -> {
-      final B k = f.apply(t);
-      return mt.put(k, mt.get(k).getOrElse(list()).cons(t));
-    });
-  }
+//  public <B> Map<B, List<A>> groupBy(Function<A, B> f) {
+//    return foldRight(Map.empty(), t -> mt -> {
+//      final B k = f.apply(t);
+//      return mt.put(k, mt.get(k).getOrElse(list()).cons(t));
+//    });
+//  }
 
   public boolean exists(Function<A, Boolean> p) {
     return foldLeft(false, true, x -> y -> x || p.apply(y))._1;
